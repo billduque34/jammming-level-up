@@ -1,0 +1,22 @@
+.SearchResults {
+    margin: 10px 0px 10px 20px;
+    overflow: scroll;
+    height: 550px;
+}
+
+.SearchResults > p {
+    font-family: 'Poppins';
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.SearchResults .song-list {
+    margin: 50px auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}

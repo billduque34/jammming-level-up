@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+.EntryScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./bg_entry.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 752px;
+}
+
+.EntryScreen::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(54, 0, 126, 0.788);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.EntryScreen .pop-up-authentication {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 25%;
+    height: 100px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: rgb(39, 15, 56);
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.EntryScreen .pop-up-authentication p {
+    font-family: 'Poppins';
+}
+
+.EntryScreen .pop-up-authentication svg {
+    margin-right: 10px;
+}
+
+.EntryScreen .entry-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 25%;
+    height: 70%;
+    background-color: rgb(48, 4, 78);
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.EntryScreen .entry-section .app-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.EntryScreen .entry-section p {
+    font-family: 'Poppins';
+    color: white;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.EntryScreen .entry-section span {
+    color: rgb(114, 38, 255);
+}
+
+.EntryScreen .entry-section p:nth-child(2) {
+    color: white;
+    font-weight: normal;
+    font-style: oblique;
+    font-size: 1.2rem;
+}
+
+.EntryScreen .entry-section button {
+    font-family: 'Poppins';
+    font-size: 1rem;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 40px;
+    background-color: rgb(64, 0, 184);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.EntryScreen .entry-section button:hover {
+    background-color: rgba(94, 82, 255, 0.678);
+}

@@ -1,0 +1,85 @@
+.MainScreen {
+    position: relative;
+    z-index: 1;
+    background-color: rgb(91, 0, 211);
+    display: flex;
+    overflow: hidden;
+}
+
+.MainScreen header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(29, 1, 75);
+    width: 280px;
+    height: 650px;
+    box-shadow: 0px 0px 5px black;
+    padding: 20px 10px;
+}
+
+.MainScreen header p {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.MainScreen header p span {
+    color: rgb(114, 38, 255);
+}
+
+.MainScreen header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.MainScreen header nav .button {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: flex;
+    font-size: 1.2rem;
+    padding: 15px 10px;
+    width: 100%;
+    transition: .5s ease-in;
+    border-radius: 10px;
+}
+
+.MainScreen header nav p {
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.MainScreen header nav svg {
+    margin-right: 15px;
+}
+
+.MainScreen header nav .button:hover {
+    background-color: rgba(71, 0, 71, 0.863);;    
+}
+
+.MainScreen > main {
+    width: 90%;
+    background-image: url('../EntryScreen/bg_entry.jpg');
+    background-size: cover;
+}
+
+.MainScreen > main::before {
+    z-index: 1;
+    content: '';
+    background-color: rgba(63, 1, 105, 0.726);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.main-screen iframe:first-child {
+    
+}

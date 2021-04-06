@@ -1,0 +1,24 @@
+.SearchBar {
+    display: flex;
+    align-items: center;
+}
+
+.SearchBar input {
+    font-family: 'Poppins';
+    margin-right: 5px;
+    height: 30px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    padding: 0 20px;   
+}
+
+.SearchBar button {
+    padding: 8px;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}

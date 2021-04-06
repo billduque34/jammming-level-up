@@ -1,0 +1,33 @@
+.MusicPlayer {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 103px;
+    background-color: rgb(34, 0, 97);
+    box-shadow: 0px 0px 2px rgb(34, 0, 97);
+}
+
+.MusicPlayer img {
+    background-color: white;
+    width: 75px;
+    height: 75px;
+    margin-right: 20px;
+}
+
+.MusicPlayer .artist-info {}
+
+.MusicPlayer .artist-info p {
+    font-family: 'Poppins';
+    color: white;
+}
+
+.MusicPlayer .artist-info p:last-child {
+    margin-top: 5px;
+    font-size: .8rem;
+    font-weight: lighter;
+}
+

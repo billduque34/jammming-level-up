@@ -11,10 +11,20 @@
     height: 752px;
 }
 
+@keyframes entrynimation {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
 .EntryScreen::before {
     content: '';
     position: absolute;
-    background-color: rgba(54, 0, 126, 0.788);
+    background: linear-gradient(to top,rgba(55, 0, 126, 0.555) , rgb(95, 0, 133) 100%);
     width: 100%;
     height: 100%;
     z-index: 0;
@@ -31,9 +41,11 @@
     height: 100px;
     border-radius: 15px;
     box-shadow: 0px 0px 5px rgb(0, 0, 0);
-    background-color: rgb(39, 15, 56);
+    background-color: rgb(37, 14, 54);
     margin-bottom: 20px;
     padding: 0 20px;
+    border: 3px solid rgb(185, 65, 255);
+    animation: entrynimation 1s;
 }
 
 .EntryScreen .pop-up-authentication p {
@@ -52,10 +64,12 @@
     position: relative;
     width: 25%;
     height: 70%;
-    background-color: rgb(48, 4, 78);
-    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: rgba(52, 5, 83, 0.801);
+    box-shadow: 0px 0px 5px rgba(3, 3, 3, 0.993);
     border-radius: 15px;
     z-index: 1;
+    border: 3px solid rgb(185, 65, 255);
+    animation: entrynimation 1s;
 }
 
 .EntryScreen .entry-section .app-title {
@@ -68,11 +82,11 @@
     font-family: 'Poppins';
     color: white;
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 2.8rem;
 }
 
 .EntryScreen .entry-section span {
-    color: rgb(114, 38, 255);
+    color: rgb(137, 11, 255);
 }
 
 .EntryScreen .entry-section p:nth-child(2) {
@@ -88,7 +102,7 @@
     padding: 10px 30px;
     border: none;
     border-radius: 40px;
-    background-color: rgb(64, 0, 184);
+    background-color: rgb(120, 0, 233);
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -96,5 +110,5 @@
 }
 
 .EntryScreen .entry-section button:hover {
-    background-color: rgba(94, 82, 255, 0.678);
+    background-color: rgb(83, 0, 160);
 }

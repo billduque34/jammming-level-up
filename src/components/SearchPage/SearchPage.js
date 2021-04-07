@@ -8,6 +8,8 @@ export function SearchPage({setCurrentUri, setPlayPreview}) {
                     <SearchBar/>
                 </div>
                 <main>
+                    
+                    {/* <LoadingBar/> */}
                     <SearchResults setPlayPreview={setPlayPreview} setCurrentUri={setCurrentUri}/>
                 </main>
             </div>);

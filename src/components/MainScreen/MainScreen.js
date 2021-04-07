@@ -53,7 +53,7 @@ export function MainScreen() {
                     play={play}
                     uris={[currentUri]}
                     styles={{activeColor: '',
-                    bgColor: 'rgb(34, 0, 97)',
+                    bgColor: 'rgba(34, 0, 97,0.4)',
                     color: '#fff',
                     loaderColor: '#fff',
                     sliderColor: '#1cb954',

@@ -1,7 +1,7 @@
 .MainScreen {
     position: relative;
     z-index: 1;
-    background-color: rgb(91, 0, 211);
+    background-color: rgb(52, 2, 117);
     display: flex;
     overflow: hidden;
 }
@@ -11,17 +11,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(29, 1, 75);
+    background: linear-gradient(to top, rgba(65, 1, 117, 0.904), rgb(26, 1, 56));
     width: 280px;
     height: 650px;
-    box-shadow: 0px 0px 5px black;
     padding: 20px 10px;
 }
 
 .MainScreen header p {
     font-family: 'Poppins';
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     color: white;
 }
 
@@ -47,12 +46,12 @@
     padding: 15px 10px;
     width: 100%;
     transition: .5s ease-in;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .MainScreen header nav p {
     color: rgb(255, 255, 255);
-    font-size: 1.2rem;
+    font-size: .9rem;
     font-weight: normal;
     cursor: pointer;
 }
@@ -62,10 +61,11 @@
 }
 
 .MainScreen header nav .button:hover {
-    background-color: rgba(71, 0, 71, 0.863);;    
+    background-color: rgb(38, 0, 88);;    
 }
 
 .MainScreen > main {
+    box-sizing: border-box;
     width: 90%;
     background-image: url('../EntryScreen/bg_entry.jpg');
     background-size: cover;
@@ -74,12 +74,12 @@
 .MainScreen > main::before {
     z-index: 1;
     content: '';
-    background-color: rgba(63, 1, 105, 0.726);
+    background: linear-gradient(to top, rgba(65, 1, 117, 0.904), rgb(26, 1, 56)) ;
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-.main-screen iframe:first-child {
-    
+.main-screen {
+    background: linear-gradient(to top, rgba(65, 1, 117, 0.904), rgb(26, 1, 56)) ;
 }

@@ -1,5 +1,6 @@
 .SongCard {
-    background-color: rgba(163, 132, 214, 0.411);
+    box-sizing: border-box;
+    background:  linear-gradient(to top, rgba(54, 0, 141, 0.74), rgba(109, 3, 158, 0.568));
     box-shadow: 0px 0px 5px rgb(37, 0, 97);
     width: 100%;
     color: white;
@@ -8,6 +9,7 @@
     height: 180px;
     perspective: 1000px;
     margin-bottom: 20px;
+    border: 5px solid white;
 }
 
 .SongCard .card-inner {
@@ -32,6 +34,7 @@
     height: 180px;
     background-color: white;
     margin-right: 20px;
+    border-right: 5px solid white;
 }
 
 .SongCard .song-front-card {
@@ -65,7 +68,7 @@
     transform: rotateY(180deg);
     backface-visibility: hidden;
     position: absolute;
-    background-color: rgba(91, 71, 124, 0.384);
+    background:  linear-gradient(to top, rgba(54, 0, 141, 0.74), rgba(109, 3, 158, 0.568)) ;    
 }
 
 .SongCard .song-back-card svg {

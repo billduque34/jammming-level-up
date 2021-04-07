@@ -1,0 +1,158 @@
+.LoadingBar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+    width: 300px;
+    height: 200px;
+    border: 5px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    transform: rotate(180deg);
+}
+
+.LoadingBar .bar {
+    box-sizing: border-box;
+    background-color: white;
+    width: 20%;
+    margin: 0 2px;
+    border: 5px solid white;
+}
+
+.LoadingBar .first-bar {
+    background-color: blueviolet;
+    animation: first-anim 1s infinite;
+}
+
+@keyframes first-anim {
+    0% {
+        height: 20%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    100% {
+        height: 20%;
+    }
+}
+
+.LoadingBar .second-bar {
+    background-color: rgb(182, 112, 248);
+    animation: second-anim 1s infinite;
+}
+
+@keyframes second-anim {
+    0% {
+        height: 50%;
+    }
+
+    40% {
+        height: 80%;
+    }
+
+    60% {
+        height: 60%;
+    }
+
+    80% {
+        height: 90%;
+    }
+
+    100% {
+        height: 50%;
+    }
+}
+
+.LoadingBar .third-bar {
+    background-color: rgb(136, 16, 248);
+    animation: third-anim 1s infinite;
+}
+
+@keyframes third-anim {
+    0% {
+        height: 60%;
+    }
+
+    50% {
+        height: 90%;
+    }
+
+    100% {
+        height: 60%;
+    }
+}
+
+.LoadingBar .fourth-bar {
+    background-color: rgb(95, 2, 182);
+    animation: fourth-anim 1s infinite;
+}
+
+@keyframes fourth-anim {
+    0% {
+        height: 10%;
+    }
+
+    40% {
+        height: 80%;
+    }
+
+    60% {
+        height: 30%;
+    }
+
+    80% {
+        height: 90%;
+    }
+
+    100% {
+        height: 10%;
+    }
+}
+
+.LoadingBar .fifth-bar {
+    background-color: rgb(182, 112, 248);
+    animation: fifth-anim 1s infinite;
+}
+
+@keyframes fifth-anim {
+    0% {
+        height: 80%;
+    }
+
+    40% {
+        height: 10%;
+    }
+
+    60% {
+        height: 50%;
+    }
+
+    80% {
+        height: 40%;
+    }
+
+    100% {
+        height: 80%;
+    }
+}
+
+.LoadingBar .sixth-bar {
+    background-color: blueviolet;
+    animation: sixth-anim 1s infinite;
+}
+
+@keyframes sixth-anim {
+    0% {
+        height: 60%;
+    }
+
+    50% {
+        height: 90%;
+    }
+
+    100% {
+        height: 60%;
+    }
+}

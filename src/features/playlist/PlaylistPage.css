@@ -1,0 +1,69 @@
+.PlaylistPage {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.PlaylistPage .playlist-title {
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    height: 300px;
+    background: linear-gradient(to top, rgb(119, 0, 255), rgb(17, 17, 17));
+}
+
+.PlaylistPage .playlist-title .playlist-name h1 {
+    color: white;
+    font-family: 'Poppins';
+    font-size: 4.9rem;  
+    letter-spacing: -4px;
+}
+
+.PlaylistPage .playlist-title .playlist-name p {
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+.PlaylistPage .playlist-title img {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin-right: 30px;
+}
+
+.PlaylistPage .song-list {
+    width: 80%;
+    /* background: linear-gradient(to top, rgb(34, 0, 114), rgb(63, 0, 114)); */
+    height: 100%;
+    margin: 0 auto;
+}
+
+.PlaylistPage .song-list .song-label {
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 80px;
+    display: grid;
+    grid-template-columns: 40px repeat(3, 1fr);
+    align-items: center;
+    border-bottom: 1px solid rgb(92, 2, 167);
+}
+
+.PlaylistPage .song-list .song-label p {
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.PlaylistPage .song-list .song-label svg {
+    color: white;
+    justify-self: flex-end;
+}
+
+.PlaylistPage .song-list .songs {
+    margin-top: 20px;
+    overflow-y: scroll;
+    height: 250px;
+}

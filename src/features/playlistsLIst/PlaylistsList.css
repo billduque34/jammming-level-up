@@ -1,0 +1,19 @@
+.PlaylistsList {
+    width: 90%;
+    padding-left: 20px;
+    height: 280px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+}
+
+.PlaylistsList p {
+    font-size: .8rem !important;
+    font-weight: normal !important;
+    margin-bottom: 8px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+.PlaylistsList > p:hover {
+    color: rgb(224, 193, 250);
+}

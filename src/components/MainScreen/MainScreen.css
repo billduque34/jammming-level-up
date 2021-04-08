@@ -1,9 +1,16 @@
+.main-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .MainScreen {
     position: relative;
     z-index: 1;
     background-color: rgb(52, 2, 117);
     display: flex;
     overflow: hidden;
+    flex-grow: 2;
 }
 
 .MainScreen header {
@@ -11,9 +18,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background: linear-gradient(to top, rgba(65, 1, 117, 0.904), rgb(26, 1, 56));
     width: 280px;
-    height: 650px;
+    height: 100%;
     padding: 20px 10px;
 }
 
@@ -45,8 +53,7 @@
     font-size: 1.2rem;
     padding: 15px 10px;
     width: 100%;
-    transition: .5s ease-in;
-    border-radius: 5px;
+    transition: .1s ease-in;
 }
 
 .MainScreen header nav p {
@@ -61,7 +68,8 @@
 }
 
 .MainScreen header nav .button:hover {
-    background-color: rgb(38, 0, 88);;    
+    /* background-color: rgb(38, 0, 88);     */
+    border-left: 8px solid rgb(255, 255, 255);
 }
 
 .MainScreen > main {

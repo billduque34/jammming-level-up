@@ -5,8 +5,9 @@ import './EntryScreen.css';
 export function EntryScreen(props) {
     return (<div className="EntryScreen">
                 <div className="pop-up-authentication">
-                    <p style={{color: 'yellow'}}><FontAwesomeIcon icon={faInfoCircle}/>Click 'Enter Now' to authenticate then click 
-                    'Enter Now' again to Enter.</p>
+                    <FontAwesomeIcon icon={faInfoCircle}/>
+                    <p>Click Enter Now to authenticate then click 
+                    Enter Now again to Enter.</p>
                 </div>
                 <div className="entry-section">
                     <div className="app-title">

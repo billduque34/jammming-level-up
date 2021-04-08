@@ -48,3 +48,55 @@ export async function search(term) {
         preview: track.preview_url
     })});
 }
+
+export async function getID() {
+    const accessToken = Spotify.getAccessToken();
+    const response = await fetch('https://api.spotify.com/v1/me', {headers: {Authorization: `Bearer ${accessToken}`}});
+    const jsonResponse = await response.json();
+    return jsonResponse.id;
+}
+
+export async function getUserProfile() {
+    const accessToken = Spotify.getAccessToken();
+    const user_id = await getID();
+    const response = await fetch(`https://api.spotify.com/v1/users/${user_id}`, {headers: {Authorization: `Bearer ${accessToken}`}});
+    const jsonResponse = await response.json();
+    return {
+        display_name: jsonResponse.display_name, 
+        image: jsonResponse.images[0].url    
+    }
+}
+
+export async function getPlaylistsList() {
+    const accessToken = Spotify.getAccessToken();
+    const user_id = await getID();
+    const response = await fetch(`https://api.spotify.com/v1/users/${user_id}/playlists`, {headers: {Authorization: `Bearer ${accessToken}`}});
+    const jsonResponse = await response.json();
+    return jsonResponse.items.map(playlist => {
+        return {
+            name: playlist.name,
+            id: playlist.id
+        };
+    });
+}
+
+export async function getPlaylist(playlist_id) {
+    const accessToken = Spotify.getAccessToken();
+    const response = await fetch(`https://api.spotify.com/v1/playlists/${playlist_id}`, {headers: {Authorization: `Bearer ${accessToken}`}});
+    const jsonResponse = await response.json();
+    return {
+        name: jsonResponse.name,
+        image: jsonResponse.images[0].url,
+        songs: jsonResponse.tracks.items.map((song, index) => {
+            return {
+                index: index + 1,
+                duration: song.track.duration_ms,
+                id: song.track.id,
+                name: song.track.name,
+                artist: song.track.artists[0].name,
+                image: song.track.album.images[0].url,
+                album: song.track.album.name
+            }
+        })
+    };
+}

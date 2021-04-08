@@ -1,18 +1,22 @@
-import { faHome, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faPlusSquare, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import SpotifyWebPlayer from 'react-spotify-web-playback/lib';
+import { AccountName } from '../../features/accountName/AccountName';
+import { PlaylistPage } from '../../features/playlist/PlaylistPage';
+import { PlaylistsList } from '../../features/playlistsLIst/PlaylistsList';
 import { Spotify } from '../../SpotifyAPI/SpotifyAPI';
+import { HomePage } from '../HomePage/HomePage';
 import { PreviewPlayback } from '../PreviewPlayback/PreviewPlayback';
 import { SearchPage } from '../SearchPage/SearchPage';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+  
 import './MainScreen.css';
 
 export function MainScreen() {
     const [currentUri, setCurrentUri] = useState('');
     const [play, setPlay] = useState(false);
     const [playPreview, setPlayPreview] = useState('');
-
-
 
     useEffect(() => setPlay(true), [currentUri]);
 
@@ -24,22 +28,44 @@ export function MainScreen() {
 
     return (<div className="main-screen">
                 <div className="MainScreen">
+                <Router>
                     <header>
                         <p>Ja<span>mmm</span>ing</p>
                         <nav>
-                            <div className="button">
-                                <FontAwesomeIcon icon={faHome}/>
-                                <p>Home</p>
-                            </div>
+                            <Link to="/">
+                                <div className="button">
+                                    <FontAwesomeIcon icon={faHome}/>
+                                    <p>Home</p>
+                                </div>
+                            </Link>
+                            <Link to="/search">
                             <div className="button">
                                 <FontAwesomeIcon icon={faSearch}/>  
                                 <p>Search</p>
                             </div>
+                            </Link>
+                            <div className="button">
+                                <FontAwesomeIcon icon={faPlusSquare}/>  
+                                <p>Create Playlist</p>
+                            </div>
                         </nav>
+                        <PlaylistsList/>
                     </header>
                     <main>
-                        <SearchPage setPlayPreview={setPlayPreview} setCurrentUri={setCurrentUri}/>
+                            <AccountName/>
+                            <Switch>
+                                <Route exact path="/">
+                                    <HomePage/>
+                                </Route>
+                                <Route path="/search">
+                                    <SearchPage setPlayPreview={setPlayPreview} setCurrentUri={setCurrentUri}/>
+                                </Route>
+                                <Route path="/playlist/:id">
+                                    <PlaylistPage/>
+                                </Route>
+                            </Switch>
                     </main>
+                </Router>
                 </div>
                 {playPreview ? <PreviewPlayback playPreview={playPreview}/> : ''}
                 <SpotifyWebPlayer token={Spotify.getAccessToken()}

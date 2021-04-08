@@ -1,0 +1,31 @@
+.AccountName {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    background-color: rgb(35, 0, 99);
+    min-width: 110px;
+    height: 50px;
+    z-index: 2;
+    right: 15px;
+    top: 15px;
+    border-radius: 30px;
+    padding: 0 20px 0 3px;
+    border: 3px solid white;
+}
+
+.AccountName p {
+    font-size: 1rem;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+.AccountName img {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid white;
+}

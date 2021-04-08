@@ -34,15 +34,15 @@
 }
   
 ::-webkit-scrollbar-track {
-    background: white;
+    background: rgb(114, 4, 240);
     border-radius: 20px;
 }
   
 ::-webkit-scrollbar-thumb {
-    background: rgb(79, 1, 131);
+    background: rgb(255, 255, 255);
     border-radius: 20px;
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(28, 1, 126);
+    background: rgb(222, 213, 255);
 }

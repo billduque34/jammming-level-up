@@ -5,7 +5,6 @@ import './CreatePlaylistCard.css';
 export function CreatePlaylistCard({track, setPlaylistList, isSearch, setPlayPreview, playPreview}) {
     const removeTrack = () => {
         setPlaylistList(prevState => prevState.filter(el => {
-            console.log(el.id);
             return el.id !== track.id;
         }))
     }

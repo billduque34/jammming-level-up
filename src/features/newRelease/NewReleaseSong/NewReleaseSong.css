@@ -1,0 +1,84 @@
+.NewReleaseSong { 
+    max-width: 330px;
+    background: linear-gradient(to top, rgb(23, 1, 77), rgb(100, 0, 182));
+    border: 3px solid white;
+    border-radius: 20px;
+    overflow: hidden;
+    perspective: 1000px;
+    height: 90px;
+}
+
+.NewReleaseSong > .new-release-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.NewReleaseSong:hover .new-release-inner {
+    transform: rotateX(180deg);
+}
+
+.NewReleaseSong > .new-release-inner > .front-new-release {
+    display: flex;
+    align-items: center;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+
+
+.NewReleaseSong > .new-release-inner > .front-new-release > img {
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+    background-color: white;
+    border-right: 3px solid white;
+}
+
+.NewReleaseSong > .new-release-inner > .front-new-release > .song-label p {
+    color: white;
+    font-family: 'Poppins';
+}
+
+.NewReleaseSong > .new-release-inner > .front-new-release > .song-label > p:first-child {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.NewReleaseSong > .new-release-inner > .front-new-release > .song-label > p:last-child {
+    font-style: oblique;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.NewReleaseSong > .new-release-inner > .back-new-release {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    position: absolute;
+    background:  linear-gradient(to top, rgba(54, 0, 141, 0.74), rgba(109, 3, 158, 0.568)) ;     
+}
+
+.NewReleaseSong > .new-release-inner > .back-new-release svg {
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.NewReleaseSong > .new-release-inner > .back-new-release p {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.NewReleaseSong > .new-release-inner > .back-new-release > .play-full {
+    display: flex;
+}

@@ -1,0 +1,19 @@
+.NewRelease {
+    /* margin-top: 40px; */
+}
+
+.NewRelease > h2 {
+    font-family: 'Poppins';
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.NewRelease > .new-release-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    width: 95%;
+}

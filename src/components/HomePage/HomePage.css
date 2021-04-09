@@ -2,6 +2,8 @@
     position: relative;
     z-index: 2;
     height: 100%;
+    padding-left: 30px;
+    padding-top: 30px;   
 }
 
 .HomePage h1 {

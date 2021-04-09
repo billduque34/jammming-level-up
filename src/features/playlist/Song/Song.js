@@ -9,7 +9,7 @@ export function Song(props) {
         return `${min}:${sec <= 9 ? ("0" + sec) : sec }`;
     };
 
-    return (<div className="Song">
+    return (<div className="Song" onClick={() => props.setCurrentUri(props.uri)}>
                 <p>{props.number}</p>
                 <div className="song-name">
                     <img src={props.image} alt=""/>

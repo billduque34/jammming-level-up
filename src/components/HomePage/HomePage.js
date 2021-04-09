@@ -1,7 +1,8 @@
+import { NewRelease } from '../../features/newRelease/NewRelease';
 import './HomePage.css';
 
-export function HomePage() {
+export function HomePage(props) {
     return (<div className="HomePage">
-                <h1>Home</h1>
+                <NewRelease setCurrentUri={props.setCurrentUri}/>
             </div>);
 }

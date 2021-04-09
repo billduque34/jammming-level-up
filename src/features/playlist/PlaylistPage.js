@@ -5,7 +5,7 @@ import './PlaylistPage.css';
 import { selectPlaylist } from './playlistSlice';
 import { Song } from './Song/Song';
 
-export function PlaylistPage() {
+export function PlaylistPage(props) {
     const playlist = useSelector(selectPlaylist);
 
     return (<div className= "PlaylistPage">
@@ -25,7 +25,7 @@ export function PlaylistPage() {
                     </div>
                     <div className="songs">
                         {   Object.keys(playlist).length !== 0  ? playlist.songs.map(song => <Song name={song.name} artists={song.artist} image={song.image} key={song.id}
-                            duration={song.duration} number={song.index} album={song.album}/>) : ''}
+                            duration={song.duration} number={song.index} album={song.album} uri={song.uri} setCurrentUri={props.setCurrentUri}/>) : ''}
                     </div>
                 </div>
             </div>);

@@ -5,6 +5,7 @@
     align-items: center;
     padding: 10px 75px 10px 20px;
     transition: .2s ease-in;
+    cursor: pointer;
 }
 
 .Song:hover {

@@ -55,13 +55,13 @@ export function MainScreen() {
                             <AccountName/>
                             <Switch>
                                 <Route exact path="/">
-                                    <HomePage/>
+                                    <HomePage setCurrentUri={setCurrentUri}/>
                                 </Route>
                                 <Route path="/search">
                                     <SearchPage setPlayPreview={setPlayPreview} setCurrentUri={setCurrentUri}/>
                                 </Route>
                                 <Route path="/playlist/:id">
-                                    <PlaylistPage/>
+                                    <PlaylistPage setCurrentUri={setCurrentUri}/>
                                 </Route>
                             </Switch>
                     </main>

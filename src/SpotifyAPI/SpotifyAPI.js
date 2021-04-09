@@ -32,12 +32,10 @@ export async function search(term) {
     const response = await fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, 
                         { headers: { Authorization: `Bearer ${accessToken}` } });
     const jsonResponse = await response.json();
-    console.log(`https://api.spotify.com/v1/search?type=track&q=${term}`);
     if(!jsonResponse.tracks) {
         return []; 
     } 
     return jsonResponse.tracks.items.map(track => {
-        console.log(track);
         return ({
         id: track.id,
         name: track.name,
@@ -93,6 +91,7 @@ export async function getPlaylist(playlist_id) {
                 duration: song.track.duration_ms,
                 id: song.track.id,
                 name: song.track.name,
+                uri: song.track.uri,
                 artist: song.track.artists[0].name,
                 image: song.track.album.images[0].url,
                 album: song.track.album.name
@@ -100,3 +99,18 @@ export async function getPlaylist(playlist_id) {
         })
     };
 }
+
+export async function getNewRelease() {
+    const accessToken = Spotify.getAccessToken();
+    const response = await fetch('https://api.spotify.com/v1/browse/new-releases?limit=12&country=PH', {headers: {Authorization: `Bearer ${accessToken}`}});
+    const jsonResponse = await response.json();
+    return jsonResponse.albums.items.map(item => {
+        return {
+            name: item.name,
+            artists: item.artists[0].name,
+            id: item.id,
+            images: item.images[0].url,
+            uri: item.uri
+        }
+    });
+};

@@ -12,6 +12,7 @@ import { SearchPage } from '../SearchPage/SearchPage';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
   
 import './MainScreen.css';
+import { CreatePlaylistPage } from '../CreatePlaylistPage/CreatePlaylistPage';
 
 export function MainScreen() {
     const [currentUri, setCurrentUri] = useState('');
@@ -39,15 +40,17 @@ export function MainScreen() {
                                 </div>
                             </Link>
                             <Link to="/search">
-                            <div className="button">
-                                <FontAwesomeIcon icon={faSearch}/>  
-                                <p>Search</p>
-                            </div>
+                                <div className="button">
+                                    <FontAwesomeIcon icon={faSearch}/>  
+                                    <p>Search</p>
+                                </div>
                             </Link>
-                            <div className="button">
-                                <FontAwesomeIcon icon={faPlusSquare}/>  
-                                <p>Create Playlist</p>
-                            </div>
+                            <Link to="/createPlaylist">
+                                <div className="button">
+                                    <FontAwesomeIcon icon={faPlusSquare}/>  
+                                    <p>Create Playlist</p>
+                                </div>
+                            </Link>
                         </nav>
                         <PlaylistsList/>
                     </header>
@@ -62,6 +65,9 @@ export function MainScreen() {
                                 </Route>
                                 <Route path="/playlist/:id">
                                     <PlaylistPage setCurrentUri={setCurrentUri}/>
+                                </Route>
+                                <Route path="/createPlaylist">
+                                    <CreatePlaylistPage setPlayPreview={setPlayPreview} playPreview={playPreview}/>
                                 </Route>
                             </Switch>
                     </main>

@@ -35,7 +35,7 @@
 }
 
 .PlaylistPage .song-list {
-    width: 80%;
+    width: 90%;
     /* background: linear-gradient(to top, rgb(34, 0, 114), rgb(63, 0, 114)); */
     height: 100%;
     margin: 0 auto;
@@ -46,7 +46,8 @@
     padding-left: 20px;
     padding-right: 80px;
     display: grid;
-    grid-template-columns: 40px repeat(3, 1fr);
+    grid-template-columns: 40px repeat(2, 1fr) 40px;
+    grid-column-gap: 10px;
     align-items: center;
     border-bottom: 1px solid rgb(92, 2, 167);
 }

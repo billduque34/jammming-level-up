@@ -21,7 +21,7 @@ export const Spotify = {
             window.history.pushState('Access Token', null, '/');
             return accessToken;
         } else {
-            const accessURL = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=token&redirect_uri=${redirectURI}&scope=streaming%20user-read-email%20user-read-private%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state`;
+            const accessURL = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=token&redirect_uri=${redirectURI}&scope=streaming%20user-read-email%20user-read-private%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state%20playlist-modify-public`;
             window.location = accessURL;
         }
     }
@@ -114,3 +114,22 @@ export async function getNewRelease() {
         }
     });
 };
+
+export async function savePlaylist(name, trackURIs) {
+    const accessToken = Spotify.getAccessToken();
+    const user_id = await getID();
+    const responseName = await fetch(`https://api.spotify.com/v1/users/${user_id}/playlists`, {
+        headers: {Authorization: `Bearer ${accessToken}`},
+        method: 'POST',
+        body: JSON.stringify({name: name}) 
+    })
+    const jsonResponsePlaylistId = await responseName.json();
+    const playlistId = jsonResponsePlaylistId.id;
+    
+    await fetch(`https://api.spotify.com/v1/users/${user_id}/playlists/${playlistId}/tracks`, {
+                        headers: {Authorization: `Bearer ${accessToken}`},
+                        method: 'POST',
+                        body: JSON.stringify({uris: trackURIs})
+    });
+
+}

@@ -25,7 +25,6 @@ export function CreatePlaylistCard({track, setPlaylistList, isSearch, setPlayPre
         }
         return <button onClick={addTrack}><FontAwesomeIcon icon={faPlus}/></button>
     }
-    console.log(track.preview);
     return (<div className="CreatePlaylistCard">
                 <div className="track">
                     <div className="track-img">

@@ -33,5 +33,5 @@
     height: 400px;
     width: 100%;
     background-size: cover;
-    overflow-y: scroll;
+    overflow-y: auto;
 }

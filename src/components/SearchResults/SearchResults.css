@@ -1,6 +1,6 @@
 .SearchResults {
     margin: 10px 0px 10px 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 550px;
 }
 
@@ -25,4 +25,10 @@
 
 .SearchResults .LoadingBar {
     margin: 180px auto;
+}
+
+@media only screen and (max-height: 750px) {
+    .SearchResults {
+        height: 480px;
+    } 
 }

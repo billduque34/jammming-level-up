@@ -37,3 +37,9 @@
     margin: 0 auto;
     height: 460px;
 }
+
+@media only screen and (max-height: 750px) {
+    .CreatePlaylistPage .playlist-creator {
+        height: 370px;
+    }
+}

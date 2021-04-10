@@ -19,6 +19,7 @@
     font-family: 'Poppins';
     font-size: 4.9rem;  
     letter-spacing: -4px;
+    line-height: 4.5rem;
 }
 
 .PlaylistPage .playlist-title .playlist-name p {
@@ -65,6 +66,21 @@
 
 .PlaylistPage .song-list .songs {
     margin-top: 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 250px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .PlaylistPage .playlist-title .playlist-name h1 {
+        color: white;
+        font-family: 'Poppins';
+        font-size: 4.1rem;  
+        letter-spacing: -4px;
+    }
+}
+
+@media only screen and (max-height: 730px) {
+    .PlaylistPage .song-list .songs {
+        height: 180px;
+    }
 }

@@ -1,7 +1,7 @@
 export let accessToken;
 export let accessGranted = false;
-const redirectURI = "http://localhost:3000";
-// const redirectURI = "https://adoring-poincare-260fd4.netlify.app";
+// const redirectURI = "http://localhost:3000";
+const redirectURI = "https://adoring-poincare-260fd4.netlify.app";
 const clientID = "b024338c43684855872f5a74ae11197a";
 
 export const Spotify = {

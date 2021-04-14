@@ -4,6 +4,7 @@ import accountNameReducer from '../features/accountName/accountNameSlice';
 import playlistsListReducer from '../features/playlistsLIst/playlistsListSlice';
 import playlistReducer from '../features/playlist/playlistSlice';
 import newReleaseReducer from '../features/newRelease/newReleaseSlice';
+import categoriesReducer from '../features/category/categorySlice';
 
 export const store = configureStore({
     reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
         accountName: accountNameReducer,
         playlistsList: playlistsListReducer,
         playlist: playlistReducer,
-        newRelease: newReleaseReducer
+        newRelease: newReleaseReducer,
+        categories: categoriesReducer
     }
 });

@@ -19,5 +19,6 @@ body {
 
 .App {
     height: 100%;
+    overflow: hidden;
 }
 

@@ -1,0 +1,49 @@
+.CategoryList {
+    margin-top: 90px;
+    width: 100%;
+    font-family: 'Poppins';
+
+}
+
+.CategoryList .category-name h2 {
+    font-size: 3.3rem;
+    color: white;
+    margin: 30px auto;
+
+}
+
+.CategoryList .category-name {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.CategoryList .category-songs-container {
+    display: block;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.CategoryList .category-songs-container .category-songs-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.CategoryList .category-songs-container .category-songs-list .navigate {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 1325px) {
+    .CategoryList .category-name h2{
+        font-size: 3rem;
+    }
+}
+
+
+@media only screen and (max-width: 1210px) {
+    .CategoryList .category-name h2{
+        font-size: 2.6rem;
+    }
+}

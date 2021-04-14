@@ -102,7 +102,7 @@ export async function getPlaylist(playlist_id) {
 
 export async function getNewRelease() {
     const accessToken = Spotify.getAccessToken();
-    const response = await fetch('https://api.spotify.com/v1/browse/new-releases?limit=12&country=PH', {headers: {Authorization: `Bearer ${accessToken}`}});
+    const response = await fetch('https://api.spotify.com/v1/browse/new-releases?limit=8&country=PH', {headers: {Authorization: `Bearer ${accessToken}`}});
     const jsonResponse = await response.json();
     return jsonResponse.albums.items.map(item => {
         return {
@@ -132,4 +132,29 @@ export async function savePlaylist(name, trackURIs) {
                         body: JSON.stringify({uris: trackURIs})
     });
 
+}   
+
+export async function getCategories() {
+    const accessToken = Spotify.getAccessToken();
+    const response = await fetch('https://api.spotify.com/v1/browse/categories?limit=8&country=PH', {headers: {Authorization: `Bearer ${accessToken}`}});
+    const jsonResponse = await response.json();
+    return jsonResponse.categories.items.map(item => {
+        return {
+            id: item.id,
+            name: item.name
+        }
+    });
+}
+
+export async function getCategoryPlaylist(category_id) {
+    const accessToken = Spotify.getAccessToken();
+    const response = await fetch(`https://api.spotify.com/v1/browse/categories/${category_id}/playlists?limit=5&country=PH`, {headers: {Authorization: `Bearer ${accessToken}`}});
+    const jsonResponse = await response.json();
+    return jsonResponse.playlists.items.map(item => {
+        return {
+            name: item.name,
+            images: item.images[0].url,
+            id: item.id
+        }
+    });
 }

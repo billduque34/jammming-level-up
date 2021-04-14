@@ -13,11 +13,22 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
   
 import './MainScreen.css';
 import { CreatePlaylistPage } from '../CreatePlaylistPage/CreatePlaylistPage';
+import { useDispatch } from 'react-redux';
+import { fetchPlaylist } from '../../features/playlist/playlistSlice';
 
 export function MainScreen() {
     const [currentUri, setCurrentUri] = useState('');
     const [play, setPlay] = useState(false);
     const [playPreview, setPlayPreview] = useState('');
+
+    const [playlistID, setPlaylistID] = useState('');
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        if(playlistID) {
+            dispatch(fetchPlaylist(playlistID));
+        }
+    }, [dispatch,playlistID]);
 
     useEffect(() => setPlay(true), [currentUri]);
 
@@ -52,13 +63,13 @@ export function MainScreen() {
                                 </div>
                             </Link>
                         </nav>
-                        <PlaylistsList/>
+                        <PlaylistsList setPlaylistID={setPlaylistID}/>
                     </header>
                     <main>
                             <AccountName/>
                             <Switch>
                                 <Route exact path="/">
-                                    <HomePage setCurrentUri={setCurrentUri}/>
+                                    <HomePage setCurrentUri={setCurrentUri} setPlaylistID={setPlaylistID}/>
                                 </Route>
                                 <Route path="/search">
                                     <SearchPage setPlayPreview={setPlayPreview} setCurrentUri={setCurrentUri}/>

@@ -6,7 +6,7 @@
     background-color: rgb(35, 0, 99);
     min-width: 110px;
     height: 50px;
-    z-index: 2;
+    z-index: 5;
     right: 15px;
     top: 15px;
     border-radius: 30px;

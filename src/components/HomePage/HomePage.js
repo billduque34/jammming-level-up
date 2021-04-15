@@ -16,5 +16,6 @@ export function HomePage(props) {
     return (<div className="HomePage">
                 <NewRelease setCurrentUri={props.setCurrentUri}/>
                 {categories.map(category => <CategoryList name={category.name} id={category.id} key={category.id} setPlaylistID={props.setPlaylistID}/>)}
+                
             </div>);
 }

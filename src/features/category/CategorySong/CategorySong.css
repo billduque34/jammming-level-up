@@ -67,7 +67,7 @@
     font-size: .8rem;
 }
 
-@media only screen and (max-width: 1325px) {
+@media only screen and (max-width: 1490px) {
     .CategorySong {
         width: 180px;
         height: 180px;;
@@ -80,7 +80,7 @@
 }
 
 
-@media only screen and (max-width: 1210px) {
+@media only screen and (max-width: 1390px) {
     .CategorySong {
         width: 140px;
         height: 140px;;
@@ -89,5 +89,17 @@
     .CategorySong .song-inner .song-front img {
         width: 140px;
         height: 140px;
+    }
+}
+
+@media only screen and (max-width: 1190px) {
+    .CategorySong {
+        width: 120px;
+        height: 120px;;
+    }
+    
+    .CategorySong .song-inner .song-front img {
+        width: 120px;
+        height: 120px;
     }
 }

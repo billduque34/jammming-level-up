@@ -1,6 +1,7 @@
 .CategoryList {
+    display: flex;
+    flex-direction: column;
     margin-top: 100px;
-    margin-right: 0 !important;
     font-family: 'Poppins';
     width: 100%;
 }

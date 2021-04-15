@@ -94,12 +94,12 @@
 
 @media only screen and (max-width: 1190px) {
     .CategorySong {
-        width: 120px;
-        height: 120px;;
+        width: 135px;
+        height: 135px;;
     }
     
     .CategorySong .song-inner .song-front img {
-        width: 120px;
-        height: 120px;
+        width: 135px;
+        height: 135px;
     }
 }

@@ -82,24 +82,12 @@
 
 @media only screen and (max-width: 1390px) {
     .CategorySong {
-        width: 140px;
-        height: 140px;;
+        width: 160px;
+        height: 160px;;
     }
     
     .CategorySong .song-inner .song-front img {
-        width: 140px;
-        height: 140px;
-    }
-}
-
-@media only screen and (max-width: 1190px) {
-    .CategorySong {
-        width: 135px;
-        height: 135px;;
-    }
-    
-    .CategorySong .song-inner .song-front img {
-        width: 135px;
-        height: 135px;
+        width: 160px;
+        height: 160px;
     }
 }

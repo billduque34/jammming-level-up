@@ -25,13 +25,13 @@
 
 @media only screen and (max-width: 1325px) {
     .CategoryList .category-name h2{
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 }
 
 
 @media only screen and (max-width: 1210px) {
     .CategoryList .category-name h2{
-        font-size: 2.6rem;
+        font-size: 2.4rem;
     }
 }

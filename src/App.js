@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { getPremium } from './SpotifyAPI/SpotifyAPI';
 
 function App() {
   return (

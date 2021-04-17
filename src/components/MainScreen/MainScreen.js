@@ -5,18 +5,18 @@ import SpotifyWebPlayer from 'react-spotify-web-playback/lib';
 import { AccountName } from '../../features/accountName/AccountName';
 import { PlaylistPage } from '../../features/playlist/PlaylistPage';
 import { PlaylistsList } from '../../features/playlistsLIst/PlaylistsList';
-import { Spotify } from '../../SpotifyAPI/SpotifyAPI';
+import { getPremium, Spotify } from '../../SpotifyAPI/SpotifyAPI';
 import { HomePage } from '../HomePage/HomePage';
 import { PreviewPlayback } from '../PreviewPlayback/PreviewPlayback';
 import { SearchPage } from '../SearchPage/SearchPage';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-  
 import './MainScreen.css';
 import { CreatePlaylistPage } from '../CreatePlaylistPage/CreatePlaylistPage';
 import { useDispatch } from 'react-redux';
 import { fetchPlaylist } from '../../features/playlist/playlistSlice';
 
 export function MainScreen() {
+    const [premium, setPremium] = useState('');
     const [currentUri, setCurrentUri] = useState('');
     const [play, setPlay] = useState(false);
     const [playPreview, setPlayPreview] = useState('');
@@ -25,12 +25,21 @@ export function MainScreen() {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        getPremium().then(res => setPremium(res));
+    }, []);
+
+
+    useEffect(() => {
         if(playlistID) {
             dispatch(fetchPlaylist(playlistID));
         }
     }, [dispatch,playlistID]);
 
-    useEffect(() => setPlay(true), [currentUri]);
+    useEffect(() => {
+        if(premium === 'premium') {
+            setPlay(true);
+        }
+    }, [currentUri,premium]);
 
     useEffect(() => {
         if(play) {
